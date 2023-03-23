@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=A72BcPekNFAdjpmZKOBPmvXtpbAm4-T3AbGuI1uMuTtEmf1cLIa-FMdinH0kV01pv9wC8XHC0BLt7kDKTthUAsLEY0mm4FawVX_09XX-5antEJOt0eiNm8n4L3_GahY_" charset="UTF-8"></script>
+
+<style>
+span{color:rgb(0, 191, 255);}
+h3{color:rgb(0, 255, 0);}
+</style>
+<h3>Haz <span>dentro del lienzo</span>, y presiona cualquier tecla que veas con el valor ASCII, si presionas cualquier tecla de flecha, verás su valor ASCII así como la tecla de flecha que presionaste.
+</h3>
+<canvas id="myCanvas" width="600" height="400" style="border:1px solid;">
+</canvas>
+<h4>El valor ASCII de la tecla que presionaste: <span id="key_value"></span></h4>
+<h4 id="key_arrow"></h4>
+<script>
+canvas = document.getElementById('myCanvas');
+ctx = canvas.getContext("2d");
+window.addEventListener("keydown", function (e)
+{
+keyPressed = e.keyCode;
+document.getElementById("key_value").innerHTML = keyPressed;
+document.getElementById("key_arrow").innerHTML = "";
+	if(keyPressed == '38')
+	{
+document.getElementById("key_arrow").innerHTML = "Presionaste la tecla de la flecha de <span>Arriba.</span>";
+	}
+	if(keyPressed == '40')
+	{
+document.getElementById("key_arrow").innerHTML = "Presionaste la tecla de la flecha <span>Abajo</span>.";
+	}
+	if(keyPressed == '37')
+	{
+document.getElementById("key_arrow").innerHTML = "Presionaste la tecla de la flecha <span>Izquierda</span>.";
+	}
+	if(keyPressed == '39')
+	{
+document.getElementById("key_arrow").innerHTML = "Presionaste la flecha de la tecla <span>Derecha</span>.";
+	}
+
+});
+
+</script>
+</body>
+</html>
+
+
+
